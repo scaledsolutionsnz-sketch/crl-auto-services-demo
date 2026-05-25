@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRL Auto Services | Belfast, Christchurch | Auto Repairs & Servicing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#f5f7fa;}
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(10,18,30,0.97);backdrop-filter:blur(10px);padding:0;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 1.2rem;}
+.nav-logo{font-size:1.3rem;font-weight:900;color:#fff;text-decoration:none;padding:1.1rem 0;letter-spacing:-0.02em;}
+.nav-logo span{color:#2563eb;}
+.nav-cta{background:#2563eb;color:#fff;padding:0.55rem 1.3rem;border-radius:6px;font-weight:700;font-size:0.85rem;text-decoration:none;margin:0.75rem 0;}
+.hero{min-height:100vh;background:linear-gradient(rgba(5,12,22,0.78),rgba(5,12,22,0.78)),url('https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;padding-top:72px;}
+.hero-content{max-width:700px;margin:0 auto;padding:4rem 1.5rem;text-align:center;}
+.hero-badge{display:inline-block;background:rgba(37,99,235,0.85);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.2rem;}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.2rem;}
+.hero h1 span{color:#60a5fa;}
+.hero p{font-size:1.1rem;color:rgba(255,255,255,0.78);margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto;}
+.btn-primary{background:#2563eb;color:#fff;padding:0.9rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-block;margin-right:0.75rem;}
+.btn-outline{background:transparent;color:#fff;padding:0.9rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-block;border:1.5px solid rgba(255,255,255,0.3);}
+.section{padding:5rem 1.5rem;}
+.section-title{text-align:center;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:0.75rem;}
+.section-sub{text-align:center;color:#666;font-size:1rem;margin-bottom:3rem;max-width:520px;margin-left:auto;margin-right:auto;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto;}
+.service-card{background:#fff;border-radius:12px;padding:1.8rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);border-left:4px solid #2563eb;}
+.service-icon{font-size:2rem;margin-bottom:0.75rem;}
+.service-card h3{font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;}
+.service-card p{color:#555;font-size:0.88rem;line-height:1.6;}
+.about{background:#0a121e;padding:5rem 1.5rem;}
+.about-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.about img{width:100%;border-radius:12px;height:380px;object-fit:cover;}
+.about h2{color:#fff;font-size:clamp(1.8rem,3vw,2.3rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:1rem;}
+.about h2 span{color:#60a5fa;}
+.about p{color:rgba(255,255,255,0.68);line-height:1.7;margin-bottom:1rem;}
+.reviews{background:#f0f4ff;padding:5rem 1.5rem;}
+.stars{color:#f59e0b;font-size:1.4rem;}
+.rating-big{font-size:3rem;font-weight:900;}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:1000px;margin:2.5rem auto 0;}
+.review-card{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.review-card .stars{font-size:1rem;margin-bottom:0.5rem;}
+.review-card p{color:#444;font-size:0.9rem;line-height:1.6;font-style:italic;margin-bottom:0.75rem;}
+.reviewer{font-weight:700;font-size:0.85rem;}
+.contact{padding:5rem 1.5rem;background:#fff;}
+.contact-inner{max-width:680px;margin:0 auto;}
+.form-group{margin-bottom:1.2rem;}
+.form-group label{display:block;font-weight:600;font-size:0.88rem;margin-bottom:0.4rem;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.85rem 1rem;border:1.5px solid #d1d5db;border-radius:8px;font-size:0.95rem;font-family:inherit;}
+.form-group textarea{height:130px;resize:vertical;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.btn-submit{width:100%;background:#2563eb;color:#fff;border:none;padding:1rem;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;}
+footer{background:#0a121e;color:rgba(255,255,255,0.5);padding:3rem 1.5rem;text-align:center;}
+.footer-logo{font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:1rem;}
+.footer-logo span{color:#2563eb;}
+footer p{font-size:0.85rem;margin-bottom:0.3rem;}
+.footer-bottom{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);font-size:0.78rem;}
+@media(max-width:768px){.about-inner{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}.btn-primary,.btn-outline{display:block;margin:0 auto 0.7rem;max-width:220px;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><span>CRL</span> Auto Services</a>
+    <a href="#contact" class="nav-cta">Book a Service</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Belfast, Christchurch</div>
+    <h1>Reliable Auto Care,<br><span>Every Time</span></h1>
+    <p>WOF, servicing, repairs, and diagnostics. Cory and the CRL team keep your vehicle safe and running — no fuss, no surprises.</p>
+    <a href="#contact" class="btn-primary">Book Now</a>
+    <a href="#services" class="btn-outline">Our Services</a>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h2 class="section-title">Services We Offer</h2>
+  <p class="section-sub">Comprehensive automotive services for all makes and models at our Belfast workshop.</p>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-icon">✅</div><h3>WOF Inspections</h3><p>Quick and thorough Warrant of Fitness checks. Most WOFs done same day.</p></div>
+    <div class="service-card"><div class="service-icon">🔧</div><h3>Servicing</h3><p>Full servicing packages, oil changes, and scheduled maintenance for all vehicles.</p></div>
+    <div class="service-card"><div class="service-icon">⚡</div><h3>Electrical & Diagnostics</h3><p>Modern diagnostic tools to identify faults quickly and accurately.</p></div>
+    <div class="service-card"><div class="service-icon">🛞</div><h3>Tyres & Brakes</h3><p>Tyre supply and fitting, brake servicing, pads, and rotors.</p></div>
+    <div class="service-card"><div class="service-icon">🔩</div><h3>General Repairs</h3><p>Suspension, exhaust, engine, and mechanical repairs across all vehicle types.</p></div>
+    <div class="service-card"><div class="service-icon">🚗</div><h3>Pre-Purchase Inspections</h3><p>Buying a used car? Get a full mechanical inspection before you commit.</p></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-inner">
+    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80" alt="Auto workshop">
+    <div>
+      <h2>Belfast's Local<br><span>Auto Experts</span></h2>
+      <p>CRL Auto Services is your local workshop in Belfast, Christchurch. Cory and his team are known for being straight-up — honest diagnosis, fair pricing, and quality work every time.</p>
+      <p>We work on all makes and models, from daily drivers to utes and vans. Whether it's a routine service or a more involved repair, we'll get the job done properly and explain what we've done.</p>
+      <p>Call us on <strong style="color:#60a5fa;">03 323 4484</strong> to book or ask about your vehicle.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div style="text-align:center;">
+    <div class="rating-big">4.9</div>
+    <div class="stars">★★★★★</div>
+    <p style="color:#666;font-size:0.9rem;margin-top:0.3rem;">Google Reviews</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="stars">★★★★★</div><p>"Great workshop, very honest. Cory explained exactly what needed doing and what could wait. Didn't try to upsell anything. Exactly what you want from a mechanic."</p><div class="reviewer">— Aaron B., Belfast</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p>"Had my WOF and a service done — fast, well-priced, and the team were friendly and helpful. Will definitely be coming back for all my car maintenance."</p><div class="reviewer">— Tracey H., Christchurch</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p>"Fixed an electrical issue that two other garages couldn't diagnose. Found it quickly with their diagnostics equipment, fixed it same day. Really impressed."</p><div class="reviewer">— Wayne C.</div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <h2 class="section-title">Book a Service</h2>
+    <p class="section-sub">Let us know what you need and we'll get back to you to confirm a time.</p>
+    <form action="https://api.staticforms.xyz/submit" method="post">
+      <input type="hidden" name="accessKey" value="sf_768da8d33927e7f4f241d0a6">
+      <input type="hidden" name="subject" value="New booking enquiry from CRL Auto Services website">
+      <input type="hidden" name="redirectTo" value="https://crl-auto-services-demo.vercel.app/thank-you.html">
+      <div class="form-row">
+        <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="Your number" required></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Vehicle</label><input type="text" name="vehicle" placeholder="Make, model, year"></div>
+      <div class="form-group"><label>Service Required</label>
+        <select name="service"><option value="">Select a service</option><option>WOF Inspection</option><option>Full Service</option><option>Mechanical Repair</option><option>Electrical / Diagnostics</option><option>Tyres & Brakes</option><option>Pre-Purchase Inspection</option><option>Other</option></select>
+      </div>
+      <div class="form-group"><label>Additional Details</label><textarea name="message" placeholder="Any other details..."></textarea></div>
+      <button type="submit" class="btn-submit">Send Booking Request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><span>CRL</span> Auto Services</div>
+  <p>📍 Belfast, Christchurch, New Zealand</p>
+  <p>📞 <a href="tel:033234484" style="color:rgba(255,255,255,0.5);text-decoration:none;">03 323 4484</a></p>
+  <p>✉️ <a href="mailto:crlautoservices@gmail.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">crlautoservices@gmail.com</a></p>
+  <div class="footer-bottom">© 2025 CRL Auto Services. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
