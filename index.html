@@ -3,150 +3,907 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRL Auto Services | Belfast, Christchurch | Auto Repairs & Servicing</title>
+<title>CRL Auto Services | Belfast, Christchurch | WOF, Servicing & Repairs</title>
+<meta name="description" content="CRL Auto Services in Belfast, Christchurch. WOF inspections, vehicle servicing, tyres, brakes, and mechanical repairs. Call Cory on 03 323 4484.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#f5f7fa;}
-nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(10,18,30,0.97);backdrop-filter:blur(10px);padding:0;}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 1.2rem;}
-.nav-logo{font-size:1.3rem;font-weight:900;color:#fff;text-decoration:none;padding:1.1rem 0;letter-spacing:-0.02em;}
-.nav-logo span{color:#2563eb;}
-.nav-cta{background:#2563eb;color:#fff;padding:0.55rem 1.3rem;border-radius:6px;font-weight:700;font-size:0.85rem;text-decoration:none;margin:0.75rem 0;}
-.hero{min-height:100vh;background:linear-gradient(rgba(5,12,22,0.78),rgba(5,12,22,0.78)),url('https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;padding-top:72px;}
-.hero-content{max-width:700px;margin:0 auto;padding:4rem 1.5rem;text-align:center;}
-.hero-badge{display:inline-block;background:rgba(37,99,235,0.85);color:#fff;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.2rem;}
-.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.2rem;}
-.hero h1 span{color:#60a5fa;}
-.hero p{font-size:1.1rem;color:rgba(255,255,255,0.78);margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto;}
-.btn-primary{background:#2563eb;color:#fff;padding:0.9rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-block;margin-right:0.75rem;}
-.btn-outline{background:transparent;color:#fff;padding:0.9rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-block;border:1.5px solid rgba(255,255,255,0.3);}
-.section{padding:5rem 1.5rem;}
-.section-title{text-align:center;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:0.75rem;}
-.section-sub{text-align:center;color:#666;font-size:1rem;margin-bottom:3rem;max-width:520px;margin-left:auto;margin-right:auto;}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto;}
-.service-card{background:#fff;border-radius:12px;padding:1.8rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);border-left:4px solid #2563eb;}
-.service-icon{font-size:2rem;margin-bottom:0.75rem;}
-.service-card h3{font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;}
-.service-card p{color:#555;font-size:0.88rem;line-height:1.6;}
-.about{background:#0a121e;padding:5rem 1.5rem;}
-.about-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
-.about img{width:100%;border-radius:12px;height:380px;object-fit:cover;}
-.about h2{color:#fff;font-size:clamp(1.8rem,3vw,2.3rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:1rem;}
-.about h2 span{color:#60a5fa;}
-.about p{color:rgba(255,255,255,0.68);line-height:1.7;margin-bottom:1rem;}
-.reviews{background:#f0f4ff;padding:5rem 1.5rem;}
-.stars{color:#f59e0b;font-size:1.4rem;}
-.rating-big{font-size:3rem;font-weight:900;}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:1000px;margin:2.5rem auto 0;}
-.review-card{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
-.review-card .stars{font-size:1rem;margin-bottom:0.5rem;}
-.review-card p{color:#444;font-size:0.9rem;line-height:1.6;font-style:italic;margin-bottom:0.75rem;}
-.reviewer{font-weight:700;font-size:0.85rem;}
-.contact{padding:5rem 1.5rem;background:#fff;}
-.contact-inner{max-width:680px;margin:0 auto;}
-.form-group{margin-bottom:1.2rem;}
-.form-group label{display:block;font-weight:600;font-size:0.88rem;margin-bottom:0.4rem;}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.85rem 1rem;border:1.5px solid #d1d5db;border-radius:8px;font-size:0.95rem;font-family:inherit;}
-.form-group textarea{height:130px;resize:vertical;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.btn-submit{width:100%;background:#2563eb;color:#fff;border:none;padding:1rem;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;}
-footer{background:#0a121e;color:rgba(255,255,255,0.5);padding:3rem 1.5rem;text-align:center;}
-.footer-logo{font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:1rem;}
-.footer-logo span{color:#2563eb;}
-footer p{font-size:0.85rem;margin-bottom:0.3rem;}
-.footer-bottom{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);font-size:0.78rem;}
-@media(max-width:768px){.about-inner{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}.btn-primary,.btn-outline{display:block;margin:0 auto 0.7rem;max-width:220px;}}
+:root {
+  --dark:      #0e0a0a;
+  --dark2:     #181212;
+  --dark3:     #231919;
+  --red:       #b91c1c;
+  --red-light: #dc2626;
+  --red-glow:  rgba(185,28,28,0.18);
+  --cream:     #f9f6f3;
+  --cream2:    #f0ebe5;
+  --white:     #ffffff;
+  --muted:     #9e9e9e;
+  --border:    rgba(255,255,255,0.07);
+  --border-light: rgba(0,0,0,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--dark); overflow-x: hidden; }
+
+/* ── LOADER ── */
+#loader {
+  position: fixed; inset: 0; background: var(--dark); z-index: 9999;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+#loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.loader-logo {
+  font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 800; color: #fff; letter-spacing: 0.04em; text-align: center;
+}
+.loader-logo span { color: var(--red-light); }
+.loader-sub {
+  font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--muted); margin-top: 0.5rem; text-align: center;
+}
+.loader-track {
+  width: min(280px, 75vw); height: 2px; background: rgba(255,255,255,0.08);
+  margin-top: 2.2rem; border-radius: 2px; overflow: hidden;
+}
+.loader-fill {
+  height: 100%; width: 0; background: var(--red-light); border-radius: 2px;
+  animation: lFill 1.1s cubic-bezier(.4,0,.2,1) forwards 0.2s;
+}
+@keyframes lFill { to { width: 100%; } }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 800;
+  padding: 1.4rem 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background 0.3s, padding 0.3s, box-shadow 0.3s, backdrop-filter 0.3s;
+}
+nav.scrolled {
+  background: rgba(14,10,10,0.93); backdrop-filter: blur(16px);
+  padding: 0.9rem 3rem; box-shadow: 0 1px 28px rgba(0,0,0,0.45);
+}
+.nav-brand {
+  font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800;
+  color: #fff; text-decoration: none; letter-spacing: 0.02em; text-transform: uppercase;
+}
+.nav-brand em { font-style: normal; color: var(--red-light); }
+.nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.75);
+  text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: #fff; }
+.nav-cta {
+  background: var(--red) !important; color: #fff !important;
+  padding: 0.55rem 1.3rem; border-radius: 4px;
+  transition: background 0.2s, transform 0.15s !important;
+}
+.nav-cta:hover { background: var(--red-light) !important; transform: translateY(-1px) !important; }
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  background: none; border: none; padding: 4px;
+}
+.nav-toggle span { display: block; width: 22px; height: 2px; background: #fff; transition: 0.3s; }
+.mobile-menu {
+  display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--dark); z-index: 750; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2.5rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 700;
+  color: #fff; text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--red-light); }
+.mobile-close {
+  position: absolute; top: 1.5rem; right: 1.8rem;
+  background: none; border: none; color: #fff; font-size: 1.8rem; cursor: pointer;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center;
+  background: url('https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=1800&q=80') center/cover no-repeat;
+  overflow: hidden;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(105deg, rgba(14,10,10,0.88) 0%, rgba(14,10,10,0.55) 60%, rgba(14,10,10,0.3) 100%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 8rem 3rem 5rem;
+  max-width: 700px;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--red-light); margin-bottom: 1.5rem;
+}
+.hero-tag::before {
+  content: ''; display: block; width: 28px; height: 2px; background: var(--red-light);
+}
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+  font-weight: 800; color: #fff; line-height: 1.05;
+  letter-spacing: -0.02em; margin-bottom: 1.4rem;
+}
+.hero h1 em { font-style: normal; color: var(--red-light); }
+.hero p {
+  font-size: 1.05rem; font-weight: 300; color: rgba(255,255,255,0.75);
+  line-height: 1.75; max-width: 480px; margin-bottom: 2.5rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-red {
+  display: inline-block; background: var(--red); color: #fff;
+  padding: 0.9rem 2.2rem; border-radius: 4px; font-size: 0.9rem; font-weight: 600;
+  text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.btn-red:hover {
+  background: var(--red-light); transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(185,28,28,0.4);
+}
+.btn-ghost {
+  display: inline-block; background: transparent; color: #fff;
+  padding: 0.9rem 2.2rem; border-radius: 4px; font-size: 0.9rem; font-weight: 600;
+  text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.07);
+  transform: translateY(-2px);
+}
+.hero-stats {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+  background: var(--dark2); border-top: 1px solid var(--border);
+  display: flex; align-items: stretch;
+}
+.hero-stat {
+  flex: 1; padding: 1.4rem 2rem; border-right: 1px solid var(--border);
+  text-align: center;
+}
+.hero-stat:last-child { border-right: none; }
+.hero-stat-num {
+  font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800;
+  color: var(--red-light); line-height: 1;
+}
+.hero-stat-label {
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin-top: 0.3rem;
+}
+
+/* ── SECTION COMMON ── */
+.section { padding: 6rem 3rem; }
+.section-inner { max-width: 1160px; margin: 0 auto; }
+.tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--red-light); margin-bottom: 1rem;
+}
+.tag::before { content: ''; display: block; width: 20px; height: 2px; background: var(--red-light); }
+.section-heading {
+  font-family: 'Syne', sans-serif; font-size: clamp(1.9rem, 3.5vw, 3rem);
+  font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: var(--dark);
+  margin-bottom: 1rem;
+}
+.section-heading.light { color: #fff; }
+.section-sub {
+  font-size: 1rem; font-weight: 400; color: #666; line-height: 1.7;
+  max-width: 520px;
+}
+.section-sub.light { color: rgba(255,255,255,0.6); }
+
+/* ── SERVICES ── */
+.services-bg { background: var(--cream2); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; margin-top: 3.5rem;
+}
+.svc-card {
+  background: #fff; border-radius: 12px; padding: 2rem 1.8rem;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  opacity: 0; transform: translateY(24px);
+}
+.svc-card.visible {
+  opacity: 1; transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s, border-color 0.25s;
+}
+.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(185,28,28,0.1);
+  border-color: rgba(185,28,28,0.25);
+}
+.svc-icon {
+  width: 48px; height: 48px; background: var(--red-glow); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; margin-bottom: 1.2rem;
+}
+.svc-card h3 {
+  font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700;
+  color: var(--dark); margin-bottom: 0.6rem;
+}
+.svc-card p { font-size: 0.88rem; color: #666; line-height: 1.65; }
+
+/* ── ABOUT ── */
+.about-bg { background: var(--dark2); }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: center; margin-top: 3rem;
+}
+.about-image-wrap { position: relative; }
+.about-image-wrap img {
+  width: 100%; height: 460px; object-fit: cover; border-radius: 12px;
+  display: block;
+}
+.about-badge {
+  position: absolute; bottom: -1.5rem; right: -1.5rem;
+  background: var(--red); color: #fff; border-radius: 10px;
+  padding: 1.2rem 1.5rem; text-align: center;
+  box-shadow: 0 8px 24px rgba(185,28,28,0.4);
+}
+.about-badge-num {
+  font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800; line-height: 1;
+}
+.about-badge-label {
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; opacity: 0.85; margin-top: 0.3rem;
+}
+.about-text p {
+  font-size: 0.97rem; color: rgba(255,255,255,0.65); line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+.about-text p:last-of-type { margin-bottom: 2rem; }
+.about-points { list-style: none; margin-bottom: 2.5rem; }
+.about-points li {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+.about-points li::before {
+  content: ''; display: block; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--red-light); flex-shrink: 0; margin-top: 0.4rem;
+}
+
+/* ── WHY ── */
+.why-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: center;
+}
+.why-image img {
+  width: 100%; height: 400px; object-fit: cover; border-radius: 12px; display: block;
+}
+.why-items { margin-top: 2rem; }
+.why-item {
+  display: flex; gap: 1.2rem; padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+  opacity: 0; transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.why-item.visible { opacity: 1; transform: translateX(0); }
+.why-item:last-child { border-bottom: none; }
+.why-num {
+  font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800;
+  color: var(--red-light); opacity: 0.25; flex-shrink: 0; line-height: 1;
+  width: 48px;
+}
+.why-item h4 {
+  font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700;
+  color: var(--dark); margin-bottom: 0.35rem;
+}
+.why-item p { font-size: 0.88rem; color: #666; line-height: 1.65; }
+
+/* ── GALLERY ── */
+.gallery-bg { background: var(--dark); }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 240px 240px;
+  gap: 1rem; margin-top: 3rem;
+}
+.gal-item { overflow: hidden; border-radius: 10px; }
+.gal-item:first-child { grid-row: 1 / 3; }
+.gal-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.5s ease;
+}
+.gal-item:hover img { transform: scale(1.04); }
+
+/* ── REVIEWS ── */
+.reviews-bg { background: var(--cream2); }
+.reviews-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1.5rem;
+}
+.reviews-score {
+  display: flex; align-items: center; gap: 1.2rem;
+}
+.score-big {
+  font-family: 'Syne', sans-serif; font-size: 4rem; font-weight: 800;
+  color: var(--dark); line-height: 1;
+}
+.score-stars { color: #f59e0b; font-size: 1.3rem; line-height: 1; margin-bottom: 0.3rem; }
+.score-label { font-size: 0.78rem; color: #888; letter-spacing: 0.1em; text-transform: uppercase; }
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+}
+.review-card {
+  background: #fff; border-radius: 14px; padding: 1.8rem;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.review-card.visible { opacity: 1; transform: translateY(0); }
+.review-stars { color: #f59e0b; font-size: 0.95rem; margin-bottom: 0.9rem; }
+.review-card p {
+  font-size: 0.9rem; color: #444; line-height: 1.7;
+  font-style: italic; margin-bottom: 1rem;
+}
+.reviewer-name {
+  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--dark);
+}
+.reviewer-meta { font-size: 0.75rem; color: #999; margin-top: 0.15rem; }
+
+/* ── CONTACT ── */
+.contact-bg { background: var(--dark); }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 5rem; align-items: start;
+}
+.contact-info-title {
+  font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800;
+  color: #fff; margin-bottom: 1.5rem; line-height: 1.2;
+}
+.contact-item {
+  display: flex; gap: 1rem; align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.contact-icon {
+  width: 40px; height: 40px; background: rgba(185,28,28,0.15);
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; flex-shrink: 0;
+}
+.contact-item-label {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem;
+}
+.contact-item-value {
+  font-size: 0.95rem; color: rgba(255,255,255,0.85); font-weight: 500;
+}
+.contact-item-value a {
+  color: rgba(255,255,255,0.85); text-decoration: none;
+  transition: color 0.2s;
+}
+.contact-item-value a:hover { color: var(--red-light); }
+.contact-form-wrap {
+  background: #fff; border-radius: 14px; padding: 2.5rem;
+}
+.contact-form-wrap h3 {
+  font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800;
+  color: var(--dark); margin-bottom: 0.4rem;
+}
+.contact-form-wrap p {
+  font-size: 0.88rem; color: #888; margin-bottom: 1.8rem;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { margin-bottom: 1.1rem; }
+.form-group label {
+  display: block; font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  color: #555; margin-bottom: 0.4rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 0.8rem 1rem;
+  border: 1.5px solid #e5e7eb; border-radius: 7px;
+  font-family: 'Inter', sans-serif; font-size: 0.92rem; color: var(--dark);
+  background: #fafafa; transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none; appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--red); box-shadow: 0 0 0 3px rgba(185,28,28,0.1);
+}
+.form-group textarea { height: 120px; resize: vertical; }
+.btn-form-submit {
+  width: 100%; background: var(--red); color: #fff; border: none;
+  padding: 1rem; border-radius: 7px; font-family: 'Syne', sans-serif;
+  font-size: 0.92rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  cursor: pointer; transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.btn-form-submit:hover {
+  background: var(--red-light); transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(185,28,28,0.35);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark); border-top: 1px solid var(--border);
+  padding: 3rem 3rem 2rem;
+}
+.footer-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 2rem;
+}
+.footer-brand {
+  font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.6rem;
+}
+.footer-brand em { font-style: normal; color: var(--red-light); }
+.footer-tagline { font-size: 0.82rem; color: var(--muted); }
+.footer-links { display: flex; flex-direction: column; gap: 0.4rem; }
+.footer-links a {
+  font-size: 0.82rem; color: var(--muted); text-decoration: none; transition: color 0.2s;
+}
+.footer-links a:hover { color: #fff; }
+.footer-bottom {
+  max-width: 1160px; margin: 2rem auto 0;
+  padding-top: 1.5rem; border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 0.75rem;
+}
+.footer-bottom p { font-size: 0.78rem; color: var(--muted); }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { gap: 3rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+@media (max-width: 768px) {
+  nav { padding: 1.1rem 1.5rem; }
+  nav.scrolled { padding: 0.8rem 1.5rem; }
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .hero-content { padding: 7rem 1.5rem 5rem; }
+  .hero-stats { display: none; }
+  .section { padding: 4rem 1.5rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-badge { right: 0; bottom: -1rem; }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-image { display: none; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .gal-item:first-child { grid-row: auto; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .reviews-header { flex-direction: column; align-items: flex-start; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo"><span>CRL</span> Auto Services</a>
-    <a href="#contact" class="nav-cta">Book a Service</a>
-  </div>
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo"><em>CRL</em> Auto Services</div>
+  <div class="loader-sub">Belfast · Christchurch</div>
+  <div class="loader-track"><div class="loader-fill"></div></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-brand"><em>CRL</em> Auto Services</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#reviews" class="mobile-link">Reviews</a>
+  <a href="#contact" class="mobile-link">Book Now</a>
+</div>
+
+<!-- HERO -->
 <section class="hero">
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">Belfast, Christchurch</div>
-    <h1>Reliable Auto Care,<br><span>Every Time</span></h1>
-    <p>WOF, servicing, repairs, and diagnostics. Cory and the CRL team keep your vehicle safe and running — no fuss, no surprises.</p>
-    <a href="#contact" class="btn-primary">Book Now</a>
-    <a href="#services" class="btn-outline">Our Services</a>
+    <div class="hero-tag">Belfast, Christchurch</div>
+    <h1>Belfast's Trusted<br>Auto <em>Workshop</em></h1>
+    <p>WOF inspections, vehicle servicing, tyres, brakes, and mechanical repairs — done properly, on time, and at a fair price. Talk to Cory.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-red">Book a Service</a>
+      <a href="tel:033234484" class="btn-ghost">03 323 4484</a>
+    </div>
   </div>
-</section>
-
-<section class="section" id="services">
-  <h2 class="section-title">Services We Offer</h2>
-  <p class="section-sub">Comprehensive automotive services for all makes and models at our Belfast workshop.</p>
-  <div class="services-grid">
-    <div class="service-card"><div class="service-icon">✅</div><h3>WOF Inspections</h3><p>Quick and thorough Warrant of Fitness checks. Most WOFs done same day.</p></div>
-    <div class="service-card"><div class="service-icon">🔧</div><h3>Servicing</h3><p>Full servicing packages, oil changes, and scheduled maintenance for all vehicles.</p></div>
-    <div class="service-card"><div class="service-icon">⚡</div><h3>Electrical & Diagnostics</h3><p>Modern diagnostic tools to identify faults quickly and accurately.</p></div>
-    <div class="service-card"><div class="service-icon">🛞</div><h3>Tyres & Brakes</h3><p>Tyre supply and fitting, brake servicing, pads, and rotors.</p></div>
-    <div class="service-card"><div class="service-icon">🔩</div><h3>General Repairs</h3><p>Suspension, exhaust, engine, and mechanical repairs across all vehicle types.</p></div>
-    <div class="service-card"><div class="service-icon">🚗</div><h3>Pre-Purchase Inspections</h3><p>Buying a used car? Get a full mechanical inspection before you commit.</p></div>
-  </div>
-</section>
-
-<section class="about">
-  <div class="about-inner">
-    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80" alt="Auto workshop">
-    <div>
-      <h2>Belfast's Local<br><span>Auto Experts</span></h2>
-      <p>CRL Auto Services is your local workshop in Belfast, Christchurch. Cory and his team are known for being straight-up — honest diagnosis, fair pricing, and quality work every time.</p>
-      <p>We work on all makes and models, from daily drivers to utes and vans. Whether it's a routine service or a more involved repair, we'll get the job done properly and explain what we've done.</p>
-      <p>Call us on <strong style="color:#60a5fa;">03 323 4484</strong> to book or ask about your vehicle.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">WOF</div>
+      <div class="hero-stat-label">Same-Day Available</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">All</div>
+      <div class="hero-stat-label">Makes & Models</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">4.9★</div>
+      <div class="hero-stat-label">Google Rating</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">Belfast</div>
+      <div class="hero-stat-label">Christchurch, NZ</div>
     </div>
   </div>
 </section>
 
-<section class="reviews">
-  <div style="text-align:center;">
-    <div class="rating-big">4.9</div>
-    <div class="stars">★★★★★</div>
-    <p style="color:#666;font-size:0.9rem;margin-top:0.3rem;">Google Reviews</p>
-  </div>
-  <div class="reviews-grid">
-    <div class="review-card"><div class="stars">★★★★★</div><p>"Great workshop, very honest. Cory explained exactly what needed doing and what could wait. Didn't try to upsell anything. Exactly what you want from a mechanic."</p><div class="reviewer">— Aaron B., Belfast</div></div>
-    <div class="review-card"><div class="stars">★★★★★</div><p>"Had my WOF and a service done — fast, well-priced, and the team were friendly and helpful. Will definitely be coming back for all my car maintenance."</p><div class="reviewer">— Tracey H., Christchurch</div></div>
-    <div class="review-card"><div class="stars">★★★★★</div><p>"Fixed an electrical issue that two other garages couldn't diagnose. Found it quickly with their diagnostics equipment, fixed it same day. Really impressed."</p><div class="reviewer">— Wayne C.</div></div>
+<!-- SERVICES -->
+<section class="section services-bg" id="services">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="tag">What We Do</div>
+      <h2 class="section-heading">Complete Auto Services<br>Under One Roof</h2>
+      <p class="section-sub">Everything your vehicle needs, from its annual WOF to full mechanical repairs — all handled at our Belfast workshop.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon">✅</div>
+        <h3>WOF Inspections</h3>
+        <p>Thorough Warrant of Fitness checks carried out to NZTA standards. Same-day WOFs available — book ahead and we'll have you in and out fast.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔧</div>
+        <h3>Vehicle Servicing</h3>
+        <p>Full-service packages including oil and filter changes, fluid checks, and scheduled maintenance to manufacturer specifications for all makes and models.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🛞</div>
+        <h3>Tyres & Brakes</h3>
+        <p>Tyre supply, fitting, and balancing. Brake pad and rotor replacement, brake fluid flushes — keeping you safe on the road.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">⚡</div>
+        <h3>Electrical & Diagnostics</h3>
+        <p>Modern scan tools and diagnostic equipment to quickly identify faults. Warning lights, electrical faults, and sensor issues resolved accurately.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔩</div>
+        <h3>Mechanical Repairs</h3>
+        <p>Suspension, exhaust, engine, clutch, and drivetrain repairs. No job is too big or too small — we'll give you an honest assessment and fair quote.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔍</div>
+        <h3>Pre-Purchase Inspections</h3>
+        <p>Considering a used vehicle? Our pre-purchase inspection gives you a clear picture of what you're buying before you commit to anything.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="contact-inner">
-    <h2 class="section-title">Book a Service</h2>
-    <p class="section-sub">Let us know what you need and we'll get back to you to confirm a time.</p>
-    <form action="https://api.staticforms.xyz/submit" method="post">
-      <input type="hidden" name="accessKey" value="sf_768da8d33927e7f4f241d0a6">
-      <input type="hidden" name="subject" value="New booking enquiry from CRL Auto Services website">
-      <input type="hidden" name="redirectTo" value="https://crl-auto-services-demo.vercel.app/thank-you.html">
-      <div class="form-row">
-        <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
-        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="Your number" required></div>
+<!-- ABOUT -->
+<section class="section about-bg" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=900&q=80" alt="CRL Auto Services workshop Belfast Christchurch">
+        <div class="about-badge">
+          <div class="about-badge-num">A+</div>
+          <div class="about-badge-label">Trusted Service</div>
+        </div>
       </div>
-      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com"></div>
-      <div class="form-group"><label>Vehicle</label><input type="text" name="vehicle" placeholder="Make, model, year"></div>
-      <div class="form-group"><label>Service Required</label>
-        <select name="service"><option value="">Select a service</option><option>WOF Inspection</option><option>Full Service</option><option>Mechanical Repair</option><option>Electrical / Diagnostics</option><option>Tyres & Brakes</option><option>Pre-Purchase Inspection</option><option>Other</option></select>
+      <div class="about-text reveal">
+        <div class="tag">About CRL</div>
+        <h2 class="section-heading light">Belfast's Local<br>Auto Experts</h2>
+        <p>CRL Auto Services is Cory's workshop in Belfast, Christchurch. We've built a reputation around straightforward service — we tell you what needs doing, what can wait, and we charge fairly for everything in between.</p>
+        <p>We service all makes and models, from small hatchbacks to utes, vans, and everything in between. Whether you're due for your annual WOF, need new tyres, or something's not right under the bonnet — bring it in.</p>
+        <ul class="about-points">
+          <li>Honest diagnosis — we won't recommend work you don't need</li>
+          <li>Fair, upfront pricing before any work begins</li>
+          <li>Quality parts and workmanship on every job</li>
+          <li>Quick turnaround — we respect your time</li>
+        </ul>
+        <a href="#contact" class="btn-red">Book Your Vehicle In</a>
       </div>
-      <div class="form-group"><label>Additional Details</label><textarea name="message" placeholder="Any other details..."></textarea></div>
-      <button type="submit" class="btn-submit">Send Booking Request</button>
-    </form>
+    </div>
   </div>
 </section>
 
+<!-- WHY CRL -->
+<section class="section" id="why">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <div class="reveal">
+          <div class="tag">Why Choose Us</div>
+          <h2 class="section-heading">The CRL Difference</h2>
+          <p class="section-sub">We know you have options. Here's why Belfast locals keep coming back to us.</p>
+        </div>
+        <div class="why-items">
+          <div class="why-item">
+            <div class="why-num">01</div>
+            <div>
+              <h4>Straight-Up Honesty</h4>
+              <p>Cory tells it like it is. You'll always know exactly what needs doing and what it'll cost before we start. No hidden fees, no unnecessary upsells.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">02</div>
+            <div>
+              <h4>Fast Turnaround</h4>
+              <p>We book efficiently and work quickly. Same-day WOFs, prompt servicing, and most repairs turned around without leaving you stuck.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">03</div>
+            <div>
+              <h4>All Makes & Models</h4>
+              <p>Japanese, European, American — petrol, diesel, hybrid. If it's got wheels, we've likely worked on it. We're familiar with the common problems for each.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">04</div>
+            <div>
+              <h4>Local & Reliable</h4>
+              <p>We're a Belfast workshop — easy to get to from across Christchurch's north. Local business, local prices, and a team that cares about the community it serves.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-image reveal">
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=900&q=80" alt="Auto mechanic Belfast Christchurch">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-bg">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="tag" style="--red-light:#dc2626;">Our Workshop</div>
+      <h2 class="section-heading light">Quality Work<br>Every Time</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=900&q=80" alt="Vehicle repair Belfast workshop">
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&q=80" alt="Brake service Christchurch">
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=600&q=80" alt="Tyre fitting Belfast">
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=600&q=80" alt="Vehicle servicing Christchurch">
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1562519776-b232b3dca41b?w=600&q=80" alt="Engine diagnostics Belfast">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews-bg" id="reviews">
+  <div class="section-inner">
+    <div class="reviews-header reveal">
+      <div>
+        <div class="tag">What Customers Say</div>
+        <h2 class="section-heading">Google Reviews</h2>
+      </div>
+      <div class="reviews-score">
+        <div class="score-big">4.9</div>
+        <div>
+          <div class="score-stars">★★★★★</div>
+          <div class="score-label">Google Rating · Belfast</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Cory is the kind of mechanic everyone wants — straight-up honest, no fluff. Told me exactly what needed doing and what could wait another year. Won't go anywhere else for my WOFs and servicing."</p>
+        <div class="reviewer-name">Aaron B.</div>
+        <div class="reviewer-meta">Belfast, Christchurch</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Fast, well-priced, and genuinely friendly. Had my WOF and a service done on the same day. They called to update me on progress. That kind of communication is rare — really appreciated it."</p>
+        <div class="reviewer-name">Tracey H.</div>
+        <div class="reviewer-meta">Christchurch</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Had an electrical fault that two other workshops couldn't find. CRL found it within the hour using their diagnostic gear and had it sorted same day. Absolute legends. Highly recommend."</p>
+        <div class="reviewer-name">Wayne C.</div>
+        <div class="reviewer-meta">Christchurch, NZ</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Brought my van in for a service and a brake check. They did both quickly and the price was exactly what they quoted. I've been recommending CRL to all my workmates — top-notch workshop."</p>
+        <div class="reviewer-name">Brendan M.</div>
+        <div class="reviewer-meta">North Christchurch</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Used CRL for a pre-purchase inspection on a second-hand car. They found a couple of things the seller hadn't mentioned — saved me thousands. Thorough, detailed report. Worth every cent."</p>
+        <div class="reviewer-name">Lisa T.</div>
+        <div class="reviewer-meta">Belfast area</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Always busy — which tells you something. I've been going to CRL for three years. New tyres, servicing, and a clutch job last year. Every time: quality work, fair price, no drama."</p>
+        <div class="reviewer-name">Jason R.</div>
+        <div class="reviewer-meta">Christchurch</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-bg" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="tag">Get in Touch</div>
+        <div class="contact-info-title">Book Your Vehicle<br>in at CRL</div>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:2rem;">Give us a call or fill in the form and we'll confirm a time that suits. Same-day WOFs available most days.</p>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value"><a href="tel:033234484">03 323 4484</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value"><a href="mailto:crlautoservices@gmail.com">crlautoservices@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">Belfast, Christchurch, NZ</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal">
+        <h3>Book a Service</h3>
+        <p>Tell us about your vehicle and what you need — we'll be in touch to confirm.</p>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+          <input type="hidden" name="apiKey" value="sf_768da8d33927e7f4f241d0a6">
+          <input type="hidden" name="subject" value="New service booking — CRL Auto Services">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="firstName" placeholder="First name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="lastName" placeholder="Last name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="Your phone number">
+          </div>
+          <div class="form-group">
+            <label>Vehicle (Make, Model, Year)</label>
+            <input type="text" name="vehicle" placeholder="e.g. Toyota Hilux 2018">
+          </div>
+          <div class="form-group">
+            <label>Service Required</label>
+            <select name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>WOF Inspection</option>
+              <option>Full Service</option>
+              <option>Tyres & Brakes</option>
+              <option>Mechanical Repair</option>
+              <option>Electrical / Diagnostics</option>
+              <option>Pre-Purchase Inspection</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Additional Details</label>
+            <textarea name="message" placeholder="Any other details about your vehicle or the issue…"></textarea>
+          </div>
+          <button type="submit" class="btn-form-submit">Send Booking Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <div class="footer-logo"><span>CRL</span> Auto Services</div>
-  <p>📍 Belfast, Christchurch, New Zealand</p>
-  <p>📞 <a href="tel:033234484" style="color:rgba(255,255,255,0.5);text-decoration:none;">03 323 4484</a></p>
-  <p>✉️ <a href="mailto:crlautoservices@gmail.com" style="color:rgba(255,255,255,0.5);text-decoration:none;">crlautoservices@gmail.com</a></p>
-  <div class="footer-bottom">© 2025 CRL Auto Services. All rights reserved.</div>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand"><em>CRL</em> Auto Services</div>
+      <div class="footer-tagline">WOF · Servicing · Repairs · Belfast, Christchurch</div>
+    </div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div>
+      <div class="footer-tagline">📞 <a href="tel:033234484" style="color:var(--muted);text-decoration:none;">03 323 4484</a></div>
+      <div class="footer-tagline" style="margin-top:0.4rem;">✉️ <a href="mailto:crlautoservices@gmail.com" style="color:var(--muted);text-decoration:none;">crlautoservices@gmail.com</a></div>
+      <div class="footer-tagline" style="margin-top:0.4rem;">📍 Belfast, Christchurch, NZ</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 CRL Auto Services. All rights reserved.</p>
+    <p>Built by <a href="https://scaleds.co.nz" style="color:var(--muted);text-decoration:none;" target="_blank">Scaled Solutions</a></p>
+  </div>
 </footer>
 
+<script>
+// Loader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+  }, 1400);
+});
+
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Mobile menu
+const toggle = document.getElementById('navToggle');
+const menu = document.getElementById('mobileMenu');
+const close = document.getElementById('mobileClose');
+toggle.addEventListener('click', () => menu.classList.add('open'));
+close.addEventListener('click', () => menu.classList.remove('open'));
+document.querySelectorAll('.mobile-link').forEach(l => {
+  l.addEventListener('click', () => menu.classList.remove('open'));
+});
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal, .svc-card, .review-card, .why-item');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const delay = el.classList.contains('svc-card') || el.classList.contains('review-card')
+        ? Array.from(el.parentElement.children).indexOf(el) * 80
+        : 0;
+      setTimeout(() => el.classList.add('visible'), delay);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

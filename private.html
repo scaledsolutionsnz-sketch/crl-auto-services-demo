@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share Your Feedback | CRL Auto Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --dark: #0e0a0a; --red: #b91c1c; --red-light: #dc2626;
+  --cream: #f9f6f3; --white: #fff; --muted: #9e9e9e; --border: #e5e7eb;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--dark); min-height: 100vh; display: flex; flex-direction: column; }
+header {
+  background: var(--dark); padding: 1.2rem 2rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.header-brand {
+  font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 800;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none;
+}
+.header-brand em { font-style: normal; color: var(--red-light); }
+main {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 3rem 1.5rem;
+}
+.card {
+  background: #fff; border-radius: 16px; padding: 2.8rem 2.5rem;
+  max-width: 520px; width: 100%;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08); border: 1px solid var(--border);
+}
+.card-icon { font-size: 2.4rem; margin-bottom: 1rem; }
+.card h1 {
+  font-family: 'Syne', sans-serif; font-size: 1.7rem; font-weight: 800;
+  color: var(--dark); margin-bottom: 0.6rem; letter-spacing: -0.02em;
+}
+.card p { font-size: 0.92rem; color: #666; line-height: 1.7; margin-bottom: 1.8rem; }
+.stars-row { display: flex; gap: 0.5rem; margin-bottom: 1.8rem; }
+.star-btn {
+  font-size: 2rem; background: none; border: none; cursor: pointer;
+  color: #ddd; transition: color 0.15s, transform 0.15s;
+}
+.star-btn:hover, .star-btn.active { color: #f59e0b; transform: scale(1.15); }
+.form-group { margin-bottom: 1.1rem; }
+.form-group label {
+  display: block; font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase; color: #555; margin-bottom: 0.4rem;
+}
+.form-group input, .form-group textarea {
+  width: 100%; padding: 0.8rem 1rem;
+  border: 1.5px solid var(--border); border-radius: 8px;
+  font-family: 'Inter', sans-serif; font-size: 0.92rem; color: var(--dark);
+  background: #fafafa; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus {
+  border-color: var(--red); box-shadow: 0 0 0 3px rgba(185,28,28,0.1);
+}
+.form-group textarea { height: 120px; resize: vertical; }
+.btn-submit {
+  width: 100%; background: var(--red); color: #fff; border: none;
+  padding: 1rem; border-radius: 8px; font-family: 'Syne', sans-serif;
+  font-size: 0.92rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  cursor: pointer; transition: background 0.2s, transform 0.15s;
+}
+.btn-submit:hover { background: var(--red-light); transform: translateY(-1px); }
+.success-state { display: none; text-align: center; padding: 2rem 0; }
+.success-state .check { font-size: 3rem; margin-bottom: 1rem; }
+.success-state h2 {
+  font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800;
+  color: var(--dark); margin-bottom: 0.6rem;
+}
+.success-state p { font-size: 0.9rem; color: #666; line-height: 1.7; }
+footer {
+  background: var(--dark); padding: 1.5rem 2rem;
+  text-align: center; color: var(--muted); font-size: 0.78rem;
+}
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="header-brand"><em>CRL</em> Auto Services</a>
+</header>
+<main>
+  <div class="card">
+    <div id="formState">
+      <div class="card-icon">💬</div>
+      <h1>Share Your Experience</h1>
+      <p>We appreciate your honest feedback. This helps us improve our service and ensure every customer gets the best experience at CRL Auto Services.</p>
+      <p style="font-size:0.82rem;color:#aaa;margin-bottom:1.2rem;">This feedback is private and goes directly to our team.</p>
+      <div class="stars-row" id="starsRow">
+        <button class="star-btn" data-val="1">★</button>
+        <button class="star-btn" data-val="2">★</button>
+        <button class="star-btn" data-val="3">★</button>
+        <button class="star-btn" data-val="4">★</button>
+        <button class="star-btn" data-val="5">★</button>
+      </div>
+      <form action="https://api.staticforms.xyz/submit" method="post">
+        <input type="hidden" name="apiKey" value="sf_768da8d33927e7f4f241d0a6">
+        <input type="hidden" name="subject" value="Private feedback — CRL Auto Services">
+        <input type="hidden" name="rating" id="ratingInput" value="">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="firstName" placeholder="First name" required>
+        </div>
+        <div class="form-group">
+          <label>Email (optional)</label>
+          <input type="email" name="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>Your Feedback</label>
+          <textarea name="message" placeholder="Tell us about your visit — what went well, or what we could do better." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Submit Feedback</button>
+      </form>
+    </div>
+    <div class="success-state" id="successState">
+      <div class="check">✅</div>
+      <h2>Thanks for your feedback</h2>
+      <p>We've received your message and really appreciate you taking the time to share your experience with us. We'll use this to keep improving.</p>
+    </div>
+  </div>
+</main>
+<footer>© 2025 CRL Auto Services · Belfast, Christchurch · <a href="tel:033234484" style="color:var(--muted);text-decoration:none;">03 323 4484</a></footer>
+<script>
+let rating = 0;
+const stars = document.querySelectorAll('.star-btn');
+stars.forEach(btn => {
+  btn.addEventListener('click', () => {
+    rating = parseInt(btn.dataset.val);
+    document.getElementById('ratingInput').value = rating + ' stars';
+    stars.forEach((s, i) => s.classList.toggle('active', i < rating));
+  });
+  btn.addEventListener('mouseover', () => {
+    const val = parseInt(btn.dataset.val);
+    stars.forEach((s, i) => s.style.color = i < val ? '#f59e0b' : '#ddd');
+  });
+});
+document.getElementById('starsRow').addEventListener('mouseleave', () => {
+  stars.forEach((s, i) => s.style.color = i < rating ? '#f59e0b' : '#ddd');
+});
+</script>
+</body>
+</html>
